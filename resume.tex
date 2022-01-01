@@ -1,0 +1,309 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Var Bhat's Resume in Latex                             %
+% Author : Var Bhat                                      %
+% Github : https://github.com/varbhat/resume             %
+% Credits: https://github.com/sb2nov/resume              %
+%          https://github.com/sc932/resume               %
+% License : MIT License                                  %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[letterpaper,11pt]{article}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% PACKAGES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{multicol}
+\usepackage{hyperref}  
+\usepackage{xcolor}
+
+\input{glyphtounicode}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% FONT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[sfdefault]{GoSans}
+%\usepackage[default]{comicneue}
+%\usepackage[sfdefault]{inter}
+%\usepackage[sfdefault]{roboto}
+%\usepackage[lf]{venturis}
+%\usepackage[sfdefault]{noto}
+%\usepackage[default]{lato}
+%\usepackage{txfonts}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Page Configuration and Styling %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.0in}
+\setlength{\footskip}{4.08003pt}
+%
+
+\urlstyle{same}
+
+
+\definecolor{dark-blue}{rgb}{0.15,0.15,0.4}
+\hypersetup{colorlinks,linkcolor={dark-blue},citecolor={dark-blue},urlcolor={dark-blue}}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Formatting of Sections
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generated PDF file is machine readable or parsable by ATC
+\pdfgentounicode=1
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% COMMANDS %%%%%%%%%%%%%%%%%%%
+
+\newcommand{\ResumeHeader}[6]{
+\hspace*{\fill} {\scriptsize\color{gray}\emph{Last updated on \today}}
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+ #1 & #2 \\
+ #3 & #4 \\
+ #5 & #6 \\
+\end{tabular*}
+}
+
+\newcommand{\EducationEntry}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+
+\newcommand{\ProjectEntry}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+
+\newcommand{\projectItemListStart}{\begin{itemize}[leftmargin=2mm]}
+\newcommand{\projectItemListEnd}{\end{itemize}}
+\newcommand{\projectItem}[1]{
+  \item[$\diamond$]\small{
+    {#1}
+  }
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% RESUME %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+
+%--------------HEADER-----------------------%
+\ResumeHeader
+{\textbf{\href{https://github.com/varbhat}{\Large\color{black}{Var Bhat}}}}   {\href{mailto:mailvarbhat@gmail.com}{mailvarbhat@gmail.com}}
+{\href{https://github.com/varbhat}{github.com/varbhat}} {\href{https://linkedin.com/in/var-bhat}{linkedin.com/in/var-bhat}} 
+{{Bangalore, India}}
+{\href{tel:+919113612019}{+91 9113612019}}
+%------------------------------------------%
+
+
+%-----------EDUCATION----------------------%
+\section{Education}
+\resumeSubHeadingListStart
+\EducationEntry
+{Bachelor of Engineering in Computer Science}
+{August 2019 -- (expected) June 2023}
+{\href{https://vtu.ac.in}{Visvesvaraya Technological University}}
+{Bangalore, India}
+\resumeSubHeadingListEnd
+\setlength{\columnsep}{0.5cm}
+%-------------------------------------------%
+
+
+%-----------PROJECTS-------------------------%
+\setlength{\columnsep}{0.5cm}
+
+
+%-----------PROJECTS-----------
+\section{Projects}
+
+\resumeSubHeadingListStart
+\resumeProjectHeading
+{\textbf{\href{https://github.com/varbhat/exatorrent}{Exatorrent}} $|$ \emph{Bittorrent Client written in Go}}{August 2021 -- Present}
+\projectItemListStart
+\projectItem{Developed Self-hostable , easy-to-use , lightweight and feature-rich torrent client written in Go . It comes with beautiful Web UI and Optional Multi-User Support . Run Locally or Host in Server . Open/Download/Stream Torrents in Browser Right Away! Thousands of Stars and 250k+ Pulls.}
+\projectItem{Written in Go , Frontend in Typescript/Javascript and Svelte . Docker Image is provided. Automations using Github Actions (Earlier Prototypes in CircleCI , React , Vuejs ). Uses WebSockets and REST APIs. Provides WebHooks , Media Serving , System Monitoring (Prometheus). Sqlite3 and PostgreSQL are used as Database.}
+\projectItemListEnd
+\resumeSubHeadingListEnd
+    
+\resumeSubHeadingListStart
+\resumeProjectHeading
+{\textbf{\href{https://github.com/varbhat/slocation}{Slocation}} $|$ \emph{Router in Javascript for Svelte}}{}
+\projectItemListStart
+\projectItem{Wrote Reactive Svelte Location Store which is Router for Svelte written in Javascript/Typescript. Published to NPM. Used in exatorrent.}
+\projectItemListEnd
+\resumeSubHeadingListEnd
+    
+    
+\resumeSubHeadingListStart
+\resumeProjectHeading
+{\textbf{\href{https://github.com/varbhat/bast}{bast}} $|$ \emph{Basic to C Transpiler}}{}
+\projectItemListStart
+\projectItem{Developed Transpiler which takes BASIC dialect Code as Input and transpiles it to C Program. Explored Textual Parsing and Generation.}
+\projectItemListEnd
+\resumeSubHeadingListEnd
+    
+    
+\resumeSubHeadingListStart
+\resumeProjectHeading
+{\textbf{\href{https://github.com/varbhat/void-container}{void-container}} $|$ \emph{Docker Images for Void Linux built weekly}}{}
+\projectItemListStart
+\projectItem{Void Linux CI/CD Docker Images are built weekly and on each push to the repository by Github Actions . Images are deployed in numerous Docker,Podman and Kubernetes Instances. Used Shell Scripting and Agile Methodologies.}
+\projectItemListEnd
+\resumeSubHeadingListEnd
+    
+\resumeSubHeadingListStart
+\resumeProjectHeading
+{\textbf{\href{https://github.com/varbhat/crossmac}{crossmac}} $|$ \emph{Compile for MacOS in Linux}}{}
+\projectItemListStart
+\projectItem{Cross Compiler for MacOS available on Linux and Cloud.}
+\projectItemListEnd
+\resumeSubHeadingListEnd
+    
+ 
+\resumeSubHeadingListStart
+\resumeProjectHeading
+{\textbf{\href{https://github.com/varbhat/serv}{serv}} $|$ \emph{File Directory Server}}{}
+\projectItemListStart
+\projectItem{Superfast HTTP Server to Serve Directories and SPAs. Log Requests on the go.}
+\projectItemListEnd
+\resumeSubHeadingListEnd
+
+
+\resumeSubHeadingListStart
+\resumeProjectHeading
+{\textbf{\href{https://github.com/varbhat/remdl}{remdl}} $|$ \emph{Remote HTTP Downloader}}{}
+\projectItemListStart
+\projectItem{Self-Hostable Application to Remotely Download HTTP Files from Internet in Server. Concurrency and Scaling are explored.}
+\projectItemListEnd
+\resumeSubHeadingListEnd
+
+
+
+    
+    
+
+    
+    
+\resumeSubHeadingListStart
+\resumeProjectHeading
+{\textbf{\href{https://github.com/varbhat/torpar}{torpar}} $|$ \emph{TUI Client to Search DHT Torrents}}{}
+\projectItemListStart
+\projectItem{Command Line TUI Application to Search Torrents in DHT.}
+\projectItemListEnd
+\resumeSubHeadingListEnd
+    
+
+\begin{center}
+	\emph{\small Please refer to \href{https://github.com/varbhat}{Github Profile} for a more complete list of Projects.}
+\end{center}
+%----------------------------------------------%
+
+
+%--------------- Technical Skills ---------------------%
+\setlength{\columnsep}{1cm}
+\section{Technical Skills}
+\resumeSubHeadingListStart
+\resumeSubItem{Programming Languages}
+{Go , Python , Javascript / Typescript , Java , Kotlin , C++ , Rust }
+\resumeSubItem{Web Frameworks}
+{React.js , Vue.js , Svelte , Next.js , Redux , Node.js , Express , Three.js}
+\resumeSubItem{Backend}
+{Chi , Gorilla , Node.js , Express , Flask , Django , FastAPI , Springboot , Ktor}
+\resumeSubItem{Database}
+{PostgreSQL , Sqlite3 , Redis , MongoDB , Cassandra , RocksDB , ElasticSearch}
+\resumeSubItem{API}
+{REST , WebSocket , GraphQL , gRPC}
+\resumeSubItem{Cloud}
+{AWS , GCP}
+\resumeSubItem{Tools}
+{Docker , Kubernetes , CI/CD , Jenkins , Git , Qemu/KVM , Nginx , Prometheus , Traefik , Nginx , Varnish }
+\resumeSubItem{Other Frameworks}
+{Tailwind CSS , Bootstrap CSS , MaterialUI , Jetpack , Jetpack Compose}
+\resumeSubItem{Others}
+{ Apache Kafka , RabbitMQ , Benthos , NATS , Celery}
+\resumeSubItem{OS}
+{Linux(Debian,Alpine) , FreeBSD , MacOS , Windows}
+\resumeSubItem{Other Skills}
+{Googling , Algorithms and Data Structures , Touch Typing , Self-Hosting , Designing and Administering Systems , \LaTeX}
+\resumeSubItem{Languages}
+{English\emph{(Full Professional Proficiency)}}
+\resumeSubHeadingListEnd
+%--------------------------------------------------------%
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}

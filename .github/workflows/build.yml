@@ -1,0 +1,27 @@
+name: 'Build LaTex Document'
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install Github CLI      
+        run: |
+          curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg
+          echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
+          sudo apt update
+          sudo apt install gh
+      - name: Checkout
+        uses: actions/checkout@v2
+      - uses: xu-cheng/latex-action@v2
+        with:
+          root_file: "*.tex"
+          glob_root_file: true
+      - name: Upload pdf
+        uses: actions/upload-artifact@v2
+        with:
+          name: main
+          path: ./*.pdf
+      - name: Publish Releases
+        run: |
+          gh config set prompt disabled
+          GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }} gh release create "$(date +%s)" -t "$(date +%s)" -p *.pdf
